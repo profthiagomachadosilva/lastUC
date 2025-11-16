@@ -2,6 +2,7 @@
 import express from "express";
 import Agendamento from "./agendamentos.js";
 import cors from "cors";
+import path from "path";
 
 const app = express();
 
@@ -9,6 +10,12 @@ app.use(cors());
 
 // Middleware para ler JSON do corpo da requisição
 app.use(express.json());
+
+// Caminho absoluto da pasta public
+const __dirname = path.resolve();
+
+// Servir arquivos estáticos
+app.use(express.static(path.join(__dirname, "public")));
 
 // GET - Consulta os dados cadastrados
 app.get ("/agendamentos", async (req, res)=>{
