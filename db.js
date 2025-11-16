@@ -28,7 +28,7 @@ const db = new Sequelize(
 db.authenticate().then((function(){
     console.log("Conectado ao banco com sucesso")
 })).catch(function(erro){
-    console.log("Erro ao conectar ao banco de dados: " + erro)
+    console.log("Erro ao conectar ao banco de dados : " + erro)
 });
 
 export default db;
