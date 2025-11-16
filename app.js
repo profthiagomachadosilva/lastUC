@@ -32,7 +32,7 @@ app.post('/agendamentos', async (req , res)=>{
         });
         res.send("Agendamento cadastrado com sucesso!");
     } catch (error) {
-        res.send("Erro ao cadastrar o agendamento" + error);
+        res.send("Erro ao cadastrar os agendamentos" + error);
     }
 });
 
